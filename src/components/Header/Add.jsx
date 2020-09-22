@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import ResultsCard from "./ResultsCard";
+import ResultsCard from "../ResultsCard";
+
+import styled from "./Add.module.css";
 
 const Add = () => {
   const [query, setquery] = useState("");
@@ -27,30 +29,28 @@ const Add = () => {
     }
   }
   return (
-    <div className="add-page">
-      <div className="container">
-        <div className="add-content">
-          <div className="input-wrapper">
-            <input
-              type="text"
-              placeholder="Search for a movie"
-              value={query}
-              onChange={handleChange}
-            />
-          </div>
-
-          {results.length > 0 && (
-            <ul className="results">
-              {results.map((movie) => (
-                <li key={movie.id}>
-                  <ResultsCard movie={movie} />
-                </li>
-              ))}
-            </ul>
-          )}
+    <section className="container">
+      <div className={styled.add_content}>
+        <div className={styled.input_wrapper}>
+          <input
+            type="text"
+            placeholder="Search for a movie"
+            value={query}
+            onChange={handleChange}
+          />
         </div>
+
+        {results.length > 0 && (
+          <ul className={styled.results_list}>
+            {results.map((movie) => (
+              <li key={movie.id}>
+                <ResultsCard movie={movie} />
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

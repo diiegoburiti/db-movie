@@ -1,0 +1,43 @@
+.header {
+  background-color: var(--primary);
+}
+
+.inner_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.link {
+  color: var(--white);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.brand a {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav_links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav_links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}

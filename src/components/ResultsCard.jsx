@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import Button from "./Btn/Button";
+//import styled from "./ResultsCard.module.css";
 
 const ResultsCard = ({ movie }) => {
   const {
@@ -39,20 +41,18 @@ const ResultsCard = ({ movie }) => {
         </div>
 
         <div className="controls">
-          <button
-            className="btn"
+          <Button
             disabled={watchListDisabled}
             onClick={() => addMovieToWatchList(movie)}
           >
             Add to watchlist
-          </button>
-          <button
-            className="btn"
+          </Button>
+          <Button
             disabled={watchedListDisabled}
             onClick={() => addMovieToWatchedList(movie)}
           >
             Add to watched list
-          </button>
+          </Button>
         </div>
       </div>
     </div>
