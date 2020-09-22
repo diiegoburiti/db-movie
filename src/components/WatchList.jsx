@@ -4,6 +4,7 @@ import MovieCard from "./MovieCard";
 
 const WatchList = () => {
   const { watchList } = useContext(GlobalContext);
+
   return (
     <div className="movie-page">
       <div className="container">

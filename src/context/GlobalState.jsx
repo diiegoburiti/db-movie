@@ -37,7 +37,7 @@ export const GlobalProvider = (props) => {
   };
 
   const removeFromWatchedList = (id) => {
-    dispatch({ type: "MOVE_TO_WATCH_LIST", payload: id });
+    dispatch({ type: "REMOVE_MOVIE_FROM_WATCHED_LIST", payload: id });
   };
 
   return (
