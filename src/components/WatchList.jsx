@@ -8,17 +8,22 @@ const WatchList = () => {
     <div className="movie-page">
       <div className="container">
         <div className="header">
-          <h1 className="heading">My watchlist</h1>
+          <h1 className="heading">My Watchlist</h1>
+          <span className="count-pill">
+            {watchList.length} {watchList.length === 0 ? "Movie" : "Movies"}
+          </span>
         </div>
 
         {watchList.length > 0 ? (
           <div className="movie-grid">
             {watchList.map((movie) => (
-              <MovieCard movie={movie} type="watchlist" />
+              <MovieCard key={movie.id} movie={movie} type="watchlist" />
             ))}
           </div>
         ) : (
-          <h2 className="no-movies">No movies in watchlist. Add some :) </h2>
+          <h2 className="no-movies">
+            No movies in your watchlist. Add some :)
+          </h2>
         )}
       </div>
     </div>
