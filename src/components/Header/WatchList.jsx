@@ -9,9 +9,9 @@ const WatchList = () => {
     <div className="movie-page">
       <div className="container">
         <div className="header">
-          <h1 className="heading">My Watchlist</h1>
+          <h1 className="heading">My Watch List</h1>
           <span className="count-pill">
-            {watchList.length} {watchList.length === 0 ? "Movie" : "Movies"}
+            {watchList.length} {watchList.length === 1 ? "Movie" : "Movies"}
           </span>
         </div>
 
@@ -23,7 +23,7 @@ const WatchList = () => {
           </div>
         ) : (
           <h2 className="no-movies">
-            No movies in your watchlist. Add some :)
+            No movies in your watch list. Add some :)
           </h2>
         )}
       </div>
