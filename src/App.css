@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 
 :root {
-  --primary: #032541;
-  --secondary: #21d07a;
+  --primary: #b0b2b3;
+  --secondary: rgba(0, 0, 0, 0.6);
   --white: #fff;
+  --header-bg: rgba(0, 0, 0, 0.6);
+  --card-bg: #282a2d;
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 0;
   margin: 0;
+  background: #1b1d20;
 }
 
 .container {
@@ -43,110 +46,13 @@ body {
   box-sizing: border-box;
 }
 
-/* .btn {
-  padding: 10px 15px;
-  background-color: var(--secondary);
-  color: var(--primary);
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  border: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  line-height: 1.1;
-}
-
-.btn:hover {
-  background-color: #1aa762;
-  opacity: 1;
-  cursor: pointer;
-}
-
-.btn:disabled {
-  pointer-events: none;
-  opacity: 0.5;
-} */
-
-/* input:focus {
-  outline: none;
-} */
-
-/* Header Styles */
-header {
-  background-color: var(--primary);
-}
-
-header .inner-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-}
-
-header a {
-  color: var(--white);
-  font-size: 1.25rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-header a:hover {
-  opacity: 0.7;
-}
-
-header .brand a {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-header .nav-links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-header .nav-links li {
-  display: inline-block;
-  margin-right: 30px;
-}
-
-header .nav-links li:last-child {
-  margin-right: 0;
-}
-
-/* Add Page */
-/* .add-content {
-  padding: 50px 0;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.add-content .input-wrapper input {
-  width: 100%;
-  background-color: var(--primary);
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  color: var(--white);
-  font-size: 1.25rem;
-} */
-
-/* .results_list {
-  padding: 0;
-  margin: 0;
-  margin-top: 20px;
-}
-
-.results_list li {
-  list-style: none;
-} */
-
 .result-card {
   display: flex;
   margin-bottom: 20px;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
 }
 
 .result-card .poster-wrapper img,

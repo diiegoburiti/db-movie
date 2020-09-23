@@ -7,9 +7,6 @@ const Add = () => {
   const [query, setquery] = useState("");
   const [results, setResults] = useState([]);
 
-  const apiKey = process.env.REACT_APP_API_KEY;
-  console.log(apiKey);
-
   async function handleChange(event) {
     event.preventDefault();
     setquery(event.target.value);

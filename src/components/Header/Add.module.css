@@ -6,16 +6,17 @@
 
 .input_wrapper input {
   width: 100%;
-  background-color: var(--primary);
+  background-color: var(--card-bg);
   padding: 10px;
   border-radius: 5px;
   border: 3px solid transparent;
   color: var(--white);
   font-size: 1.25rem;
+  transition: all 0.3s ease;
 }
 
 .input_wrapper input:focus {
-  border: 3px solid var(--secondary);
+  border: 2px solid var(--white);
   outline: none;
 }
 

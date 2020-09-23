@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--primary);
+  background-color: var(--header-bg);
 }
 
 .inner_content {

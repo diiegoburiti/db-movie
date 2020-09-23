@@ -16,11 +16,6 @@ const Header = () => {
           </div>
           <ul className={styled.nav_links}>
             <li>
-              <Link className={styled.link} to="/">
-                Watch List
-              </Link>
-            </li>
-            <li>
               <Link className={styled.link} to="/watched">
                 Watched
               </Link>
