@@ -1,31 +1,64 @@
 import React from "react";
 import styled from "styled-components";
 
-const WrapperCard = styled.div``;
+const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
+`;
+
+const PosterWrapper = styled.div`
+  img {
+    display: block;
+    max-width: 100%;
+    color: transparent;
+  }
+`;
+
+const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0.1rem;
+`;
+
+const Title = styled.h3`
+  font-size: 1.25rem;
+  color: var(--white);
+  font-weight: 600;
+`;
+
+const Vote = styled.span`
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--header-bg);
+  padding: 0.3rem;
+  color: var(--white);
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+`;
+
 const Card = ({ movie }) => {
   return (
-    <div className="result-card">
-      <div className="poster-wrapper">
-        {movie.poster_path ? (
+    <CardWrapper>
+      <PosterWrapper>
+        {movie.poster_path && (
           <img
             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
             alt={movie.title}
           />
-        ) : (
-          <div className="filler-poster"></div>
         )}
-      </div>
+      </PosterWrapper>
 
-      <div className="info">
-        <div className="header">
-          <h3 className="title">{movie.title}</h3>
-          <h4 className="release-date">
-            Year: {movie.release_date ? movie.release_date.substring(0, 4) : ""}
-          </h4>
-          <h4 className="release-date">Note: {movie.vote_average}</h4>
-        </div>
-      </div>
-    </div>
+      <Info>
+        <Title>{movie.title}</Title>
+        <Vote>{movie.vote_average}</Vote>
+      </Info>
+    </CardWrapper>
   );
 };
 

@@ -1,7 +1,25 @@
 import React, { useState } from "react";
-import ResultsCard from "../ResultsCard";
+import styled from "styled-components";
+import Input from "../Input/Input";
+import ResultsCard from "../Cards/ResultsCard";
 
-import styled from "./Add.module.css";
+const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}`;
+
+const WrapperContent = styled.div`
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+`;
+
+const ResultsList = styled.ul`
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+
+  li {
+    list-style: none;
+  }
+`;
 
 const Add = () => {
   const [query, setquery] = useState("");
@@ -12,10 +30,9 @@ const Add = () => {
     setquery(event.target.value);
     let response;
     let json;
-
     try {
       response = await fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${event.target.value}`,
+        `${API_URL}&language=en-US&page=1&include_adult=false&query=${event.target.value}`,
       );
       json = await response.json();
       if (!response.ok) throw new Error(json.message);
@@ -25,11 +42,12 @@ const Add = () => {
       setResults([]);
     }
   }
+
   return (
     <section className="container">
-      <div className={styled.add_content}>
-        <div className={styled.input_wrapper}>
-          <input
+      <WrapperContent>
+        <div>
+          <Input
             type="text"
             placeholder="Search for a movie"
             value={query}
@@ -38,15 +56,15 @@ const Add = () => {
         </div>
 
         {results.length > 0 && (
-          <ul className={styled.results_list}>
+          <ResultsList>
             {results.map((movie) => (
               <li key={movie.id}>
                 <ResultsCard movie={movie} />
               </li>
             ))}
-          </ul>
+          </ResultsList>
         )}
-      </div>
+      </WrapperContent>
     </section>
   );
 };

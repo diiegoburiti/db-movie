@@ -11,10 +11,16 @@ const Header = () => {
         <div className={styled.inner_content}>
           <div className={styled.brand}>
             <Link className={styled.link} to="/">
-              WatchList
+              Movies
             </Link>
           </div>
           <ul className={styled.nav_links}>
+            <li>
+              <Link className={styled.link} to="/watchlist">
+                WatchList
+              </Link>
+            </li>
+
             <li>
               <Link className={styled.link} to="/watched">
                 Watched
