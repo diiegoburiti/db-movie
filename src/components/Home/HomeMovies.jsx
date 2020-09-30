@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Card from "../Cards/Card";
+import { device } from "../../device";
 
 const Wrapper = styled.ul`
   display: grid;
@@ -8,6 +9,17 @@ const Wrapper = styled.ul`
   grid-template-rows: auto;
   grid-gap: 10px;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media ${device.tablet} {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media ${device.tablet} {
+    font-size: 3rem;
+    grid-template-columns: 200px;
+    justify-content: center;
+  }
 `;
 
 const HomeMovies = ({ page }) => {
@@ -37,13 +49,15 @@ const HomeMovies = ({ page }) => {
   return (
     <>
       {results.length > 0 && (
-        <Wrapper>
-          {results.map((movie) => (
-            <li key={movie.id}>
-              <Card movie={movie} />
-            </li>
-          ))}
-        </Wrapper>
+        <div className="container">
+          <Wrapper>
+            {results.map((movie) => (
+              <li key={movie.id}>
+                <Card movie={movie} />
+              </li>
+            ))}
+          </Wrapper>
+        </div>
       )}
     </>
   );

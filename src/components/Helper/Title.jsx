@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../device";
 
 const HomeTitle = styled.h1`
   font-size: ${(props) => props.fontSize || 8}rem;
@@ -31,11 +32,11 @@ const HomeTitle = styled.h1`
     }
   }
 
-  @media only screen and (max-width: 750px) {
-    font-size: 5rem;
+  @media ${device.tablet} {
+    font-size: 6rem;
   }
 
-  @media only screen and (max-width: 750px) {
+  @media ${device.tablet} {
     font-size: 3rem;
   }
 
