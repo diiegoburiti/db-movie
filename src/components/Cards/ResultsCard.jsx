@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-import Button from "../Btn/Button";
+import Button from "../Form/Button";
 
 const ResultsCard = ({ movie }) => {
   const {

@@ -1,28 +1,30 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
+import Title from "../Helper/Title";
 import MovieCard from "../MovieCard";
 
-const Watched = () => {
-  const { watched } = useContext(GlobalContext);
+const WatchList = () => {
+  const { watchList } = useContext(GlobalContext);
+
   return (
     <div className="movie-page">
       <div className="container">
         <div className="header">
-          <h1 className="heading">My Watched List</h1>
+          <Title fontSize={3} title={"My Watch List"} />
           <span className="count-pill">
-            {watched.length} {watched.length === 1 ? "Movie" : "Movies"}
+            {watchList.length} {watchList.length === 1 ? "Movie" : "Movies"}
           </span>
         </div>
 
-        {watched.length > 0 ? (
+        {watchList.length > 0 ? (
           <div className="movie-grid">
-            {watched.map((movie) => (
-              <MovieCard key={movie.id} movie={movie} type="watched" />
+            {watchList.map((movie) => (
+              <MovieCard key={movie.id} movie={movie} type="watchlist" />
             ))}
           </div>
         ) : (
           <h2 className="no-movies">
-            No movies in your watched list. Add some :)
+            No movies in your watch list. Add some :)
           </h2>
         )}
       </div>
@@ -30,4 +32,4 @@ const Watched = () => {
   );
 };
 
-export default Watched;
+export default WatchList;

@@ -1,40 +1,76 @@
 import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Button from "../Btn/Button";
+import Button from "../Form/Button";
 
-import styled from "./Header.module.css";
+const Wrapperheader = styled.header`
+  background-color: var(--header-bg);
+
+  a {
+    color: var(--white);
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+`;
+
+const InnerContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+`;
+
+const Brand = styled.div`
+  a {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+`;
+
+const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+
+  li {
+    display: inline-block;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+`;
 
 const Header = () => {
   return (
-    <header className={styled.header}>
+    <Wrapperheader className={styled.header}>
       <div className="container">
-        <div className={styled.inner_content}>
-          <div className={styled.brand}>
-            <Link className={styled.link} to="/">
-              Movies
-            </Link>
-          </div>
-          <ul className={styled.nav_links}>
+        <InnerContent>
+          <Brand>
+            <Link to="/">Movies</Link>
+          </Brand>
+          <NavLinks>
             <li>
-              <Link className={styled.link} to="/watchlist">
-                WatchList
-              </Link>
+              <Link to="/watchlist">WatchList</Link>
             </li>
 
             <li>
-              <Link className={styled.link} to="/watched">
-                Watched
-              </Link>
+              <Link to="/watched">Watched</Link>
             </li>
             <li>
               <Link to="/Add">
                 <Button>+ Add</Button>
               </Link>
             </li>
-          </ul>
-        </div>
+          </NavLinks>
+        </InnerContent>
       </div>
-    </header>
+    </Wrapperheader>
   );
 };
 

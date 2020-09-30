@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import HomeMovies from "../Home/HomeMovies";
-import Title from "../Home/Title";
+import HomeMovies from "./HomeMovies";
+import Title from "../Helper/Title";
 
 const Home = () => {
   const [pages, setPages] = useState([1]);
@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <section className="container">
-      <Title title={"Movies"} />
+      <Title margimBottom={3} title={"Movies"} />
       {pages.map((page) => (
         <HomeMovies page={page} key={page} />
       ))}

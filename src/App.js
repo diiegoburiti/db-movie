@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Add from "./components/Header/Add";
 import Header from "./components/Header/Header";
-import WatchList from "./components/Header/WatchList";
-import Watched from "./components/Header/Watched";
+import WatchList from "./components/WatchList/WatchList";
+import Watched from "./components/Watched/Watched";
 import { GlobalProvider } from "./context/GlobalState";
-import Home from "./components/Header/Home";
+import Home from "./components/Home/Home";
+import NotFound from "./components/Helper/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/add">
               <Add />
+            </Route>
+            <Route path="/*">
+              <NotFound />
             </Route>
           </Switch>
         </Router>

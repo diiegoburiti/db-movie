@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Input from "../Input/Input";
+import Input from "../Form/Input";
+import Title from "../Helper/Title";
 import ResultsCard from "../Cards/ResultsCard";
 
 const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}`;
@@ -46,6 +47,7 @@ const Add = () => {
   return (
     <section className="container">
       <WrapperContent>
+        <Title margimBottom={1} title={"Search Movies"} fontSize={5} />
         <div>
           <Input
             type="text"
