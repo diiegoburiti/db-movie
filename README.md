@@ -11,6 +11,12 @@
 
 ## DB Movie :sparkles:
 
+### Home Page
+
+<p align="center">
+<image src="./src/assets/home_movie.png" />
+</p>
+
 ### Add Page
 
 <p align="center">
