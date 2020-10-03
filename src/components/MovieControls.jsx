@@ -43,11 +43,17 @@ const MovieControls = ({ movie, type }) => {
     <WrapperControls>
       {type === "watchlist" && (
         <>
-          <CtrlBtn onClick={() => addMovieToWatchedList(movie)}>
+          <CtrlBtn
+            onClick={() => addMovieToWatchedList(movie)}
+            title={"Add Movie to Watched List"}
+          >
             <FaEye />
           </CtrlBtn>
 
-          <CtrlBtn onClick={() => removeMovieFromWatchList(movie.id)}>
+          <CtrlBtn
+            onClick={() => removeMovieFromWatchList(movie.id)}
+            title={"Remove Movie Watch List"}
+          >
             <FaTimes />
           </CtrlBtn>
         </>
@@ -55,11 +61,17 @@ const MovieControls = ({ movie, type }) => {
 
       {type === "watched" && (
         <>
-          <CtrlBtn onClick={() => moveToWatchList(movie)}>
+          <CtrlBtn
+            onClick={() => moveToWatchList(movie)}
+            title={"Back Movie to Watch List"}
+          >
             <FaEyeSlash />
           </CtrlBtn>
 
-          <CtrlBtn onClick={() => removeFromWatchedList(movie.id)}>
+          <CtrlBtn
+            onClick={() => removeFromWatchedList(movie.id)}
+            title={"Remove Movie"}
+          >
             <FaTimes />
           </CtrlBtn>
         </>

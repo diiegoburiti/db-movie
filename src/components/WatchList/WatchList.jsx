@@ -5,11 +5,11 @@ import Title from "../Helper/Title";
 import MovieCard from "../MovieCard";
 import NoMoviesInLists from "../Helper/NoMoviesInLists";
 
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   padding: 30px;
 `;
 
-const Header = styled.div`
+export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,7 +26,7 @@ const Header = styled.div`
   }
 `;
 
-const WatchListGrid = styled.div`
+export const WatchListGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
