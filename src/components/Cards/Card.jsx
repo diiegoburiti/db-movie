@@ -9,6 +9,18 @@ const CardWrapper = styled.div`
   border-radius: 5px;
   background: var(--card-bg);
   box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: translateY(0px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+
+  &:hover div:last-of-type {
+    transform: translateY(0%);
+  }
+
+  &:hover {
+    transform: translateY(-12px);
+  }
 `;
 
 const PosterWrapper = styled.div`
@@ -42,6 +54,30 @@ const Vote = styled.span`
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
 `;
 
+const OverView = styled.div`
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.8rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+
+  h2 {
+    color: var(--main-bg);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--main-bg);
+  }
+`;
+
 const Card = ({ movie }) => {
   return (
     <CardWrapper>
@@ -58,6 +94,10 @@ const Card = ({ movie }) => {
         <Title>{movie.title}</Title>
         <Vote>{movie.vote_average}</Vote>
       </Info>
+      <OverView>
+        <h2>OverView</h2>
+        <p>{movie.overview.substring(0, 220)}</p>
+      </OverView>
     </CardWrapper>
   );
 };

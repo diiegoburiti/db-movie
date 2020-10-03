@@ -35,7 +35,7 @@ const HomeMovies = ({ page }) => {
           `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`,
         );
         json = await response.json();
-        console.log(json.results.length);
+        console.log(json);
         if (!response.ok) throw new Error(json.message);
         setResults(json.results);
       } catch (err) {
