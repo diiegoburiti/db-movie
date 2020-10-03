@@ -15,7 +15,7 @@ const Wrapper = styled.ul`
     grid-template-columns: repeat(3, 200px);
   }
 
-  @media ${device.tablet} {
+  @media ${device.mobile} {
     font-size: 3rem;
     grid-template-columns: 200px;
     justify-content: center;

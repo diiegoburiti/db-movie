@@ -8,8 +8,8 @@ import { Header, WatchListGrid, Wrapper } from "./stylesPages";
 const Watched = () => {
   const { watched } = useContext(GlobalContext);
   return (
-    <Wrapper>
-      <div className="container">
+    <div className="container">
+      <Wrapper>
         <Header>
           <Title fontSize={3} title={"My Watched List"} />
           <span>
@@ -28,8 +28,8 @@ const Watched = () => {
             title={"No movies in your watch list. Add some :)"}
           />
         )}
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </div>
   );
 };
 

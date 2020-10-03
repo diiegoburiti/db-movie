@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../device";
 
 export const Wrapper = styled.section`
   padding: 30px;
@@ -23,6 +24,16 @@ export const Header = styled.div`
 
 export const WatchListGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 250px);
   grid-gap: 30px;
+
+  @media ${device.tablet} {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media ${device.tablet} {
+    font-size: 3rem;
+    grid-template-columns: 200px;
+    justify-content: center;
+  }
 `;
