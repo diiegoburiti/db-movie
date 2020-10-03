@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   position: relative;
   border: 0;
   display: block;
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
 `;
 
 const MovieCard = ({ movie, type }) => {

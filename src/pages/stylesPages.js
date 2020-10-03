@@ -24,8 +24,9 @@ export const Header = styled.div`
 
 export const WatchListGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 250px);
-  grid-gap: 30px;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 10px;
+  justify-content: space-between;
 
   @media ${device.tablet} {
     grid-template-columns: repeat(3, 200px);

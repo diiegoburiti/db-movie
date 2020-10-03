@@ -4,32 +4,20 @@ import { device } from "../../device";
 
 const HomeTitle = styled.h1`
   font-size: ${(props) => props.fontSize || 8}rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
+  font-weight: bold;
   text-align: center;
   margin-bottom: ${(props) => props.margimBottom || 0}rem;
-  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
-    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  animation: glitch 500ms infinite;
-  color: #fff;
+  color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 1);
+  transition: 0.3s all;
 
-  span {
-    &:first-child {
-      animation: glitch 4s infinite;
-      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-      transform: translate(-0.025em, -0.0125em);
-      /* color: green; */
-      opacity: 0.8;
-    }
-    &:last-child {
-      animation: glitch 4s infinite;
-      clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
-      transform: translate(0.0125em, 0.025em);
-      /* color: red; */
-      opacity: 0.8;
-    }
+  &:hover {
+    color: var(--white);
+    color: rgba(255, 255, 255, 1);
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0);
   }
 
   @media ${device.tablet} {
@@ -38,42 +26,6 @@ const HomeTitle = styled.h1`
 
   @media ${device.tablet} {
     font-size: 3rem;
-  }
-
-  @keyframes glitch {
-    0% {
-      text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-        -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    14% {
-      text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-        -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    15% {
-      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    49% {
-      text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    50% {
-      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-        0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    99% {
-      text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-        0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
-    100% {
-      text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
-        -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
-        -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-    }
   }
 `;
 
