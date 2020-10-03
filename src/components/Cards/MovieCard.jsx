@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MovieControls from "./MovieControls";
+import MovieControls from "../MovieControls";
 
 const IMG_URL = "https://image.tmdb.org/t/p/w200";
 

@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Add from "./components/Header/Add";
+import Add from "./pages/Add";
 import Header from "./components/Header/Header";
-import WatchList from "./components/WatchList/WatchList";
-import Watched from "./components/Watched/Watched";
+import WatchList from "./pages/WatchList";
+import Watched from "./pages/Watched";
 import { GlobalProvider } from "./context/GlobalState";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home";
 import NotFound from "./components/Helper/NotFound";
 
 function App() {

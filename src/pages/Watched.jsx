@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../../context/GlobalState";
-import NoMoviesInLists from "../Helper/NoMoviesInLists";
-import Title from "../Helper/Title";
-import MovieCard from "../MovieCard";
-import { Header, WatchListGrid, Wrapper } from "../WatchList/WatchList";
+import { GlobalContext } from "../context/GlobalState";
+import NoMoviesInLists from "../components/Helper/NoMoviesInLists";
+import Title from "../components/Helper/Title";
+import MovieCard from "../components/Cards/MovieCard";
+import { Header, WatchListGrid, Wrapper } from "./stylesPages";
 
 const Watched = () => {
   const { watched } = useContext(GlobalContext);

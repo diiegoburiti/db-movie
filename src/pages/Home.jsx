@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import HomeMovies from "./HomeMovies";
-import Title from "../Helper/Title";
+import HomeMovies from "../components/Home/HomeMovies";
+import Title from "../components/Helper/Title";
 
 const Home = () => {
   const [pages, setPages] = useState([1]);
