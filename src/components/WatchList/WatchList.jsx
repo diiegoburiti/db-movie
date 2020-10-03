@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import styled from "styled-components";
 import Title from "../Helper/Title";
 import MovieCard from "../MovieCard";
+import NoMoviesInLists from "../Helper/NoMoviesInLists";
 
 const Wrapper = styled.section`
   padding: 30px;
@@ -51,9 +52,9 @@ const WatchList = () => {
             ))}
           </WatchListGrid>
         ) : (
-          <h2 className="no-movies">
-            No movies in your watch list. Add some :)
-          </h2>
+          <NoMoviesInLists
+            title={"No movies in your watch list. Add some :)"}
+          />
         )}
       </div>
     </Wrapper>
