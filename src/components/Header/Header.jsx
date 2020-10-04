@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../Form/Button";
+import { device } from "../../device";
 
 const Wrapperheader = styled.header`
   background-color: var(--header-bg);
@@ -18,7 +19,7 @@ const Wrapperheader = styled.header`
   }
 `;
 
-const InnerContent = styled.div`
+const InnerContent = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,11 +45,19 @@ const NavLinks = styled.div`
       margin-right: 0;
     }
   }
+
+  @media ${device.mobile} {
+    li {
+      a {
+        font-size: 0.875rem;
+      }
+    }
+  }
 `;
 
 const Header = () => {
   return (
-    <Wrapperheader className={styled.header}>
+    <Wrapperheader>
       <div className="container">
         <InnerContent>
           <Brand>
