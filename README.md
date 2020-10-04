@@ -44,7 +44,7 @@ This is a project built with react, consuming [The Movie db API](https://www.the
 ## Tecnologies :rocket:
 
 - HTML
-- CSS MODULES
+- STYLED COMPONENTS
 - REACT
 - REACT ICONS
 
