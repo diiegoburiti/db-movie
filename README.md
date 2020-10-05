@@ -39,7 +39,7 @@
 
 ## About :memo:
 
-This is a project built with react, consuming [The Movie db API](https://www.themoviedb.org/documentation/api).
+## This is a project built with react and styled components, consuming [The Movie db API](https://www.themoviedb.org/documentation/api).
 
 ## Tecnologies :rocket:
 
@@ -47,6 +47,14 @@ This is a project built with react, consuming [The Movie db API](https://www.the
 - STYLED COMPONENTS
 - REACT
 - REACT ICONS
+
+---
+
+## Install the dependencies
+
+`npm install` or `yarn install`
+
+---
 
 ## How to Contribute 🤔
 

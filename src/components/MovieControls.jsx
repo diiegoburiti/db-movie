@@ -33,10 +33,10 @@ const CtrlBtn = styled.button`
 
 const MovieControls = ({ movie, type }) => {
   const {
-    addMovieToWatchedList,
-    removeMovieFromWatchList,
-    removeFromWatchedList,
-    moveToWatchList,
+    addMovieToWatched,
+    removeMovieFromWatchlist,
+    removeFromWatched,
+    moveToWatchlist,
   } = useContext(GlobalContext);
 
   return (
@@ -44,14 +44,14 @@ const MovieControls = ({ movie, type }) => {
       {type === "watchlist" && (
         <>
           <CtrlBtn
-            onClick={() => addMovieToWatchedList(movie)}
+            onClick={() => addMovieToWatched(movie)}
             title={"Add Movie to Watched List"}
           >
             <FaEye />
           </CtrlBtn>
 
           <CtrlBtn
-            onClick={() => removeMovieFromWatchList(movie.id)}
+            onClick={() => removeMovieFromWatchlist(movie.id)}
             title={"Remove Movie Watch List"}
           >
             <FaTimes />
@@ -62,14 +62,14 @@ const MovieControls = ({ movie, type }) => {
       {type === "watched" && (
         <>
           <CtrlBtn
-            onClick={() => moveToWatchList(movie)}
+            onClick={() => moveToWatchlist(movie)}
             title={"Back Movie to Watch List"}
           >
             <FaEyeSlash />
           </CtrlBtn>
 
           <CtrlBtn
-            onClick={() => removeFromWatchedList(movie.id)}
+            onClick={() => removeFromWatched(movie.id)}
             title={"Remove Movie"}
           >
             <FaTimes />
