@@ -25,7 +25,7 @@ const Watched = () => {
           </WatchListGrid>
         ) : (
           <NoMoviesInLists
-            title={"No movies in your watch list. Add some :)"}
+            title={"No movies in your watched list. Add some :)"}
           />
         )}
       </Wrapper>

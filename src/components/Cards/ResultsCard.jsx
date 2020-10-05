@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import Button from "../Form/Button";
 import styled from "styled-components";
 import { NoPhotoMovie } from "../Helper/NoPhotoMovie";
+import { device } from "../../device";
 
 const Wrapper = styled.div`
   display: grid;
@@ -13,6 +14,10 @@ const Wrapper = styled.div`
   border-radius: 5px;
   background: var(--card-bg);
   box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
+
+  @media ${device.mobile} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const PostWrapper = styled.div`
@@ -33,6 +38,7 @@ const Info = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top: 1rem;
+  padding: 0.5rem;
 `;
 
 const HeaderInfo = styled.div``;
@@ -79,6 +85,12 @@ const ControlsWrapper = styled.div`
     &:last-child {
       margin-top: 0.9rem;
     }
+  }
+
+  @media ${device.mobile} {
+    margin: 1rem auto;
+    width: 60%;
+    padding: 10px;
   }
 `;
 
