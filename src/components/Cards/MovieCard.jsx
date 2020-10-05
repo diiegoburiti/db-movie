@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NoPhotoMovie } from "../Helper/NoPhotoMovie";
 import MovieControls from "../MovieControls";
 
 const IMG_URL = "https://image.tmdb.org/t/p/w200";
@@ -20,7 +21,7 @@ const MovieCard = ({ movie, type }) => {
       {movie.poster_path ? (
         <img src={IMG_URL + `${movie.poster_path}`} alt={movie.title} />
       ) : (
-        <div className="filler-poster"></div>
+        <NoPhotoMovie text={movie.title} />
       )}
 
       <MovieControls type={type} movie={movie} />

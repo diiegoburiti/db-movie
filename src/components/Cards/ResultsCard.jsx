@@ -30,6 +30,10 @@ const PostWrapper = styled.div`
     display: block;
     color: transparent;
     width: 100%;
+
+    @media ${device.mobile} {
+      border-radius: 0px;
+    }
   }
 `;
 

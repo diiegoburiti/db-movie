@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NoPhotoMovie } from "../Helper/NoPhotoMovie";
 
 const CardWrapper = styled.div`
   display: flex;
@@ -82,11 +83,13 @@ const Card = ({ movie }) => {
   return (
     <CardWrapper>
       <PosterWrapper>
-        {movie.poster_path && (
+        {movie.poster_path ? (
           <img
             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
             alt={movie.title}
           />
+        ) : (
+          <NoPhotoMovie text={movie.title} />
         )}
       </PosterWrapper>
 
