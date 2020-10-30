@@ -58,6 +58,12 @@
 
 ## How to Contribute 🤔
 
+#### Step 1:
+
+- Generate your api key [themoviedb](https://www.themoviedb.org/)
+
+#### Step 2:
+
 - Fork this repository;
 - Create a branch with your feature: `git checkout -b my-feature`;
 - Commit your changes: `git commit -m 'feat: my new feature'`;
