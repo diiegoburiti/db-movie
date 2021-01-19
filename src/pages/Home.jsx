@@ -13,7 +13,7 @@ const Home = () => {
       if (scroll > height * 0.75 && !wait) {
         setPages((page) => [...page, page.length++]);
         wait = true;
-
+        
         setTimeout(() => {
           wait = true;
         }, 500);
@@ -27,7 +27,7 @@ const Home = () => {
       window.removeEventListener("wheel", infiniteScroll);
       window.removeEventListener("scroll", infiniteScroll);
     };
-  }, []);
+  }, [pages]);
 
   return (
     <section className="container">
