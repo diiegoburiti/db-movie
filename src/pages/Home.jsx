@@ -11,7 +11,7 @@ const Home = () => {
       const scroll = window.scrollY;
       const height = document.body.offsetHeight - window.innerHeight;
       if (scroll > height * 0.75 && !wait) {
-        setPages((page) => [...page, page.length + 1]);
+        setPages((page) => [...page, page.length++]);
         wait = true;
 
         setTimeout(() => {

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
+
  :root {
   --primary: #b0b2b3;
   --secondary: rgba(0, 0, 0, 0.6);
@@ -22,6 +23,7 @@ img {
 body {
   background: var(--main-bg);
   font-size: 1rem;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .container {
