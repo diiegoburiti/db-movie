@@ -1,19 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { NoPhotoMovie } from "../Helper/NoPhotoMovie";
 import MovieControls from "../MovieControls";
+import { Wrapper } from "./styles";
 
 const IMG_URL = "https://image.tmdb.org/t/p/w200";
-
-const Wrapper = styled.div`
-  width: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  border: 0;
-  display: block;
-  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
-`;
 
 const MovieCard = ({ movie, type }) => {
   return (
