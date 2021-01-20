@@ -8,6 +8,8 @@ const GlobalStyles = createGlobalStyle`
   --header-bg: rgba(0, 0, 0, 0.6);
   --card-bg: #282a2d;
   --main-bg: #1b1d20;
+  --bg-color: #090b28;
+  --bg-linear: linear-gradient(#683ea340, rgba(0, 0, 0, 0));
 }
 
 ul,
@@ -21,7 +23,7 @@ img {
 }
 
 body {
-  background: var(--main-bg);
+  background: var(--bg-color);
   font-size: 1rem;
   font-family: 'Noto Sans', sans-serif;
 }
