@@ -1,7 +1,6 @@
 import React from "react";
 import { NoPhotoMovie } from "../Helper/NoPhotoMovie";
-import Title from "../Helper/Title";
-import { CardWrapper, Info, OverView, PosterWrapper, Vote } from "./styles";
+import { CardWrapper, Info, OverView, PosterWrapper, Vote, Title } from "./styles";
 
 const Card = ({ movie }) => {
   return (
